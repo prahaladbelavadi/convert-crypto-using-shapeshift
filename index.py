@@ -7,3 +7,5 @@ def get_coins():
     url = BASE_URL % url_path
     response = requests.get(url)
     print( response.json())
+
+get_coins()
