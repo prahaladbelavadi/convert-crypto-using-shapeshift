@@ -50,4 +50,11 @@ def validate_address(address, coin_symbol):
 if __name__ == '__main__':
     print('BTC LTC Rate', get_rate('btc', 'ltc'))
     print('BTC LTC Deposit Limit', get_deposit_limit('btc', 'ltc'))
-view rawget_functions.py hosted with ❤ by GitHub
+    print ('Market info for BTC LTC', get_market_info('btc', 'ltc'))
+
+
+def isAddressValid(address, coin_symbol):
+    crypto = raw_input("Which crypto ?")
+    add = raw_input("What's your %s address") %s(crypto)
+    print (validate_address(add,crypto))
+isAddressValid()
