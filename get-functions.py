@@ -46,15 +46,22 @@ def get_tx_by_address(address, api_key):
 def validate_address(address, coin_symbol):
     url_path = "validateAddress/{}/{}".format(address, coin_symbol)
     return _shapeshift_get_request(url_path)
+#
+# if __name__ == '__main__':
+#     print('BTC LTC Rate', get_rate('btc', 'eth'))
+#     print('BTC LTC Deposit Limit', get_deposit_limit('btc', 'ltc'))
+#     print ('Market info for BTC LTC', get_market_info('btc', 'ltc'))
 
-if __name__ == '__main__':
-    print('BTC LTC Rate', get_rate('btc', 'ltc'))
-    print('BTC LTC Deposit Limit', get_deposit_limit('btc', 'ltc'))
-    print ('Market info for BTC LTC', get_market_info('btc', 'ltc'))
 
+# def isAddressValid(address, coin_symbol):
+#     crypto = raw_input("Which crypto ?")
+#     add = raw_input("What's your %s address") %s(crypto)
+#     print (validate_address(add,crypto))
+# isAddressValid()
 
-def isAddressValid(address, coin_symbol):
-    crypto = raw_input("Which crypto ?")
-    add = raw_input("What's your %s address") %s(crypto)
-    print (validate_address(add,crypto))
-isAddressValid()
+com1 = input("Comparison no1:")
+com2 = input("Comparison no2:")
+
+print(com1, com2, ' Rate', get_rate(com1, com2))
+print(com1, com2, ' Deposit Limit', get_deposit_limit(com1, com2))
+print ('Market info for:',com1, com2, get_market_info(com1, com2))
